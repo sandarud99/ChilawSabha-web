@@ -1,0 +1,124 @@
+body {
+  display: block;
+}
+.main {
+  padding: 0;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-areas: "sidebar content";
+  grid-template-columns: fit-content(20%) auto;
+}
+
+.content{
+    padding: 1rem 0;
+    padding-right: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.content-table{
+  max-width: calc(100% - 2rem);
+  overflow: auto;
+}
+
+/* #Sidebar Styles*/
+.sidebar{
+  min-width: auto;
+  background: var(--blue);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.items{
+  width: 100%;
+  cursor: pointer;  
+}
+
+.items a{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 25px;
+  border-bottom: 1px solid var(--lightblue);
+}
+.sidebar-img{
+  height: 25px;
+}
+.sub-items{
+  background-color: #FFFFFF;
+  display: none;
+}
+.sub-items a{
+  color: var(--black);
+  padding: 10px 10px;
+}
+.sub-items a:hover{
+  background: var(--lightblue);
+  color: #FFFFFF;
+}
+.show-drop{
+  display: block;
+}
+.items:hover .sidebar-drop{
+  background: var(--lightblue);
+}
+.see-more{
+  font-size: 25px;
+  text-align: right;
+  margin-left: auto;
+}
+
+@media screen and (min-width:1200px) {
+  /* WHEN SCREEN IS WIDER THAN 1200 */
+  .main{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* WHEN SCREEN IS NARROWER THAN 768px */
+  /* TODO:make sidebar responsive */
+  .items a {
+    padding: 10px;
+  }
+  .items a span {
+    display: none;
+  }
+  .items a .see-more {
+    display: block;
+    margin-left: 0;
+  }
+  .sub-items a {
+    padding: 10px 1rem;
+  }
+  .sidebar-img {
+    height: 15px;
+  }
+  .see-more{
+    font-size: 15px;
+  }
+  .main {
+    grid-gap: .4rem;
+  }
+}
+
+@media screen and (max-width: 259px) {
+  /* WHEN SCREEN IS NARROWER THAN LOGO */
+  .logo-items {
+    display: none;
+  }
+  body {
+    font-size: 8px;
+  }
+  .main {
+    grid-gap: 5px;
+  }
+  .items a .see-more {
+    font-size: 10px;
+  }
+  .items a {
+    padding: 5px;
+    gap: 3px;
+  }
+}

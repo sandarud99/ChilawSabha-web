@@ -1,0 +1,202 @@
+html, body {
+  font-family: poppins;
+}
+
+.head-area{
+    margin-bottom: 1rem;
+  }
+
+  .sub-head-area{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sub-head-area h1{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--black);
+    margin: 0.5rem;
+  }
+
+  .content-title-category select{
+    padding: 6px 16px;
+    border: 1px solid var(--grey);
+    color: var(--grey);
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .content-title-category select > option{
+    color: var(--black);
+  }
+
+  /* Styles of Book catalog page*/
+  
+  .book-table{
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+  }
+  .book-catalog-table table{
+    width: 90%;
+    border-collapse: collapse;
+  }
+  .book-catalog-table table th{
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--grey);
+    background-color: var(--lightblue);
+  }
+  .book-catalog-table table td{
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--grey);
+    background-color: var(--fadedblue);
+  } 
+  .action-btn-set{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .favourite{
+    background-color: var(--yellow);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 2%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+  }
+  .planToRead{
+    background-color: var(--lightblue);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 2%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+  }
+  .completed{
+    background-color: var(--green);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 2%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+  }
+  .extend{
+    font-size: 1.1rem;
+    padding: 0.25rem 0.5rem;
+    border:none;
+    border-radius: 0.7rem;
+    background-color: var(--blue);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 2%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+    color: var(--bgcolor);
+  }
+  .request{
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    background-color: var(--lightblue);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 2%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+  }
+  
+  .favourite:hover, .planToRead:hover, .completed:hover, .remove:hover, .extend:hover{
+    transform: scale(1.1);
+  }
+  .pagination-bar{
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+  }
+  .pagination-item{
+    border: 1px solid var(--grey);
+    padding: 0.2rem 0.5rem;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 2%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+    cursor: pointer;
+  }
+  .pagination-item:hover, .order-up:hover, .order-down:hover{
+    background-color: var(--lightblue);
+  }
+
+  .changeOrder-bar{
+    display: flex;
+    gap:0.5rem;
+    justify-content: center;
+  }
+
+  .status-available, .status-borrowed{
+    background-color: var(--green);
+    color: var(--white);
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    justify-content: center;
+    cursor: default;
+  }
+
+  .status-borrowed{
+    background-color: var(--orange);
+  }
+
+  .content-title-search{
+    display: flex;
+  }
+  .content-title-search input{
+    padding: 6px 4px;
+    border: 1px solid var(--grey);
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+  }
+  .content-title-search button{
+    padding: 6px;
+    background-color: var(--lightblue);
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+  }
+  .content-title-search button:hover{
+    background-color: var(--blue);
+  }
+  .content-title-search img{
+    display: block;
+    width: 10px;
+  }
+
+  
+
+  .changeOrder-bar button{
+    cursor: move;
+    background-color: var(--lightblue);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 2%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+  }
+
+  .changeOrder-bar button:hover{
+    transform: scale(1.2);
+  }
+  
+  .draggable{
+    cursor: move;
+  }
+  .draggable.dragging{
+    opacity: 0.5;
+  }
+
+  .filter .searchbox {
+    display: flex;
+}
+
+  .status-Available{
+    color: var(--green);
+  }
+
+  .status-Lent{
+    color: var(--yellow);
+  }
+
+  .status-Damaged,
+  .status-Lost,
+  .status-De-Listed{
+    color: var(--red);
+  }
+
+  .status-Available,
+  .status-Lent,
+  .status-Damaged,
+  .status-Lost,
+  .status-De-Listed{
+    font-weight: 900;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 768px){
+    .sub-head-area h1{
+      font-size: 1.6rem;
+      margin: 0;
+    }
+  }
+

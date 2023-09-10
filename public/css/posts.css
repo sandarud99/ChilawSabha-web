@@ -1,0 +1,122 @@
+.filters {
+  margin: 1.5rem 0;
+}
+
+.filters form {
+  display: flex;
+  gap: 30px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.filters .filter {
+  display: flex;
+}
+
+.filter > label {
+  margin-right: .5rem;
+}
+
+.filters form {
+  font-size: 1.1rem;
+}
+
+.filters form input,
+.filters form select,
+.page-size select,
+.page-nos select {
+  height: 30px;
+  border: 1px solid var(--black);
+  padding: 0 10px;
+  font-size: 1.1rem;
+}
+
+.filters form select,
+.page-size select,
+.page-nos select {
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.search {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.search-box {
+  width: max-content;
+  position: relative;
+}
+
+.search:valid~span:after,
+.search:invalid~span:after {
+  box-sizing: border-box;
+  content: "🔍";
+  position: absolute;
+  height: 30px;
+  aspect-ratio: 1/1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fadedblue);
+  border: 1px solid var(--black);
+  border-left: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-btn {
+  display: inline-flex;
+  text-decoration: none;
+  background-color: var(--blue);
+  color: var(--black);
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+.page-nos,
+.page-size {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.page-nav {
+  margin: 2rem 0;
+}
+
+@media screen and (max-width: 767px) {
+
+  /* WHEN SCREEN IS NARROWER THAN 768px */
+  .attachments .links {
+    grid-template-areas: "a a a";
+  }
+
+  .filters form{
+    flex-direction: column;
+  }
+
+  .filters .filter {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 259px) {
+
+  /* WHEN SCREEN IS NARROWER THAN LOGO */
+  .attachments .links {
+    grid-template-areas: "a";
+  }
+}
